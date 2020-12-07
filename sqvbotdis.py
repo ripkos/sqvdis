@@ -35,11 +35,11 @@ async def debug(ctx):
     global debug_mode
     debug_mode = not debug_mode
 
-"""
+
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
-"""
+
 
 # events
 @bot.event
