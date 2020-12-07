@@ -18,11 +18,13 @@ class sqvrofl(commands.Cog):
         await ctx.send(self.content[num])
 
     @commands.command()
-    async def jedi(self, ctx, pagenum=1):
+    async def gg(self, ctx, pagenum=1):
        # tosend = "номер должен быть 1, 2 или 3"
         #if pagenum == 3:
         tosend = trash()
         await ctx.send(tosend)
+        msg = await ctx.send("Next? 🌶️")
+        await msg.add_reaction('🌶️')
 
     # end
 

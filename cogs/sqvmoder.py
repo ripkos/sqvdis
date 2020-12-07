@@ -6,7 +6,7 @@ from discord.ext import commands
 from cogs.util.sqlight import SQLite
 
 from cogs.util.forumutil import *
-import cogs.util.on_reactions as afaf
+import cogs.util.reactions_moder as afaf
 
 
 class sqvmoder(commands.Cog):

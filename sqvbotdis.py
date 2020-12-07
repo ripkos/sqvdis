@@ -1,9 +1,9 @@
 import discord
 import os
 from cogs.util.util import *
-from cogs.util.on_reactions import *
+from cogs.util.reactions_moder import *
 from discord.ext import commands
-
+from cogs.util.reactions_switcher import switch
 
 bot = commands.Bot(command_prefix='sqv ')
 debug_mode = False
@@ -70,40 +70,9 @@ async def on_raw_reaction_add(payload):
     if payload.member.bot:
         return
     else:
+        await switch(payload, bot)
 
-        if payload.emoji.name == '⏬':
-            await reaction_downarrow(payload, bot)
-            return
-        if payload.emoji.name == '0️⃣':
-            await reaction_number(payload, bot, 0)
-            return
-        if payload.emoji.name == '1️⃣':
-            await reaction_number(payload, bot, 1)
-            return
-        if payload.emoji.name == '2️⃣':
-            await reaction_number(payload, bot, 2)
-            return
-        if payload.emoji.name == '3️⃣':
-            await reaction_number(payload, bot, 3)
-            return
-        if payload.emoji.name == '4️⃣':
-            await reaction_number(payload, bot, 4)
-            return
-        if payload.emoji.name == '5️⃣':
-            await reaction_number(payload, bot, 5)
-            return
-        if payload.emoji.name == '6️⃣':
-            await reaction_number(payload, bot, 6)
-            return
-        if payload.emoji.name == '7️⃣':
-            await reaction_number(payload, bot, 7)
-            return
-        if payload.emoji.name == '8️⃣':
-            await reaction_number(payload, bot, 8)
-            return
-        if payload.emoji.name == '9️⃣':
-            await reaction_number(payload, bot, 9)
-            return
+
 
 
 # run bot
