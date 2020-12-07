@@ -13,7 +13,7 @@ filesize = len(filecontent) - 1
 
 def parse(type):
     allt = []
-    # nltk.download('punkt')
+    nltk.download('punkt')
     username = 'Morginallinez'
     # 1.
     cv = '1. ' + username + '\n'

@@ -4,7 +4,7 @@ import discord
 from discord.ext import commands
 
 from cogs.util.sqlight import SQLite
-from cogs.util.jediutil import parse, trash
+
 from cogs.util.forumutil import *
 import cogs.util.on_reactions as afaf
 
@@ -16,14 +16,6 @@ class sqvmoder(commands.Cog):
         self.db = SQLite('./res/forum.db')
 
     # Commands
-    @commands.command()
-    async def jedi(self, ctx, pagenum=1):
-        tosend = "номер должен быть 1, 2 или 3"
-        if pagenum == 3:
-            tosend = trash()
-        if pagenum == 1 or pagenum == 2:
-            tosend = parse(pagenum)
-        await ctx.send(tosend)
 
     @commands.command(brief='название сервера (sqv servers)')
     async def frog(self, ctx, sname, arg1=''):
