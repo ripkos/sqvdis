@@ -1,1 +1,6 @@
 discord.py
+regex
+os
+urllib3
+random
+requests
